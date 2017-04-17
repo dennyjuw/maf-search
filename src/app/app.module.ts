@@ -5,10 +5,14 @@ import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdToolbarModule, MdButtonModule, MdCheckboxModule, MdInputModule } from '@angular/material';
+// google maps
+import { AgmCoreModule } from 'angular2-google-maps/core';
+
 
 import { AppComponent } from './app.component';
 import { MafSearchToolbarComponent } from './maf-search-toolbar/maf-search-toolbar.component';
 import { MafSearchFilterComponent } from './maf-search-filter/maf-search-filter.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +29,10 @@ import { MafSearchFilterComponent } from './maf-search-filter/maf-search-filter.
     MdToolbarModule,
     MdButtonModule,
     MdCheckboxModule,
-    MdInputModule
+    MdInputModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'YOUR_KEY'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

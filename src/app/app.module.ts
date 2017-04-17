@@ -4,14 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCheckboxModule, MdInputModule } from '@angular/material';
+import { MdToolbarModule, MdButtonModule, MdCheckboxModule, MdInputModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
+import { MafSearchToolbarComponent } from './maf-search-toolbar/maf-search-toolbar.component';
 import { MafSearchFilterComponent } from './maf-search-filter/maf-search-filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    MafSearchToolbarComponent,
     MafSearchFilterComponent
   ],
   imports: [
@@ -20,6 +22,7 @@ import { MafSearchFilterComponent } from './maf-search-filter/maf-search-filter.
     HttpModule,
     BrowserAnimationsModule,
     NgbModule.forRoot(),
+    MdToolbarModule,
     MdButtonModule,
     MdCheckboxModule,
     MdInputModule

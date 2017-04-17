@@ -1,15 +1,23 @@
-<div class="container-fluid">
+<div class="container-fluid display-flex flex-column full-height">
   <div class="row">
-    <div class="col-3">
-      <maf-search-filter></maf-search-filter>
+    <div class="col-12">
+      <app-maf-search-toolbar></app-maf-search-toolbar>
     </div>
-    <div class="col-6">
+  </div>
+  <div class="row flex-1">
+    <div class="col-md-4 col-lg-3 search-filter">
+      <app-maf-search-filter></app-maf-search-filter>
+    </div>
+    <div class="col-md-8 col-lg-6">
       <h1>
         {{title}}
       </h1>
     </div>
-    <div class="col-3">
+    <div class="col-md-12 col-lg-3">
       bb
     </div>
+  </div>
+  <div class="row">
+    FOOTER
   </div>
 </div>

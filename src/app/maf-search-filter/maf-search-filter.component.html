@@ -1,15 +1,46 @@
 <div>
 
-  <!-- maf-search-filter works! -->
+  <!-- <form> -->
 
-  <md-input-container class="example-full-width">
-    <input mdInput placeholder="Enter suburb and/or postcode">
-  </md-input-container>
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+      <ngb-panel title="Section 1">
+        <template ngbPanelContent>
 
-  <md-checkbox class="example-margin" [(ngModel)]="checked">Checked</md-checkbox>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Suburb</label>
+            <input type="text" class="form-control" id="maf-searc-suburb" placeholder="Enter suburb">            
+          </div>
 
-  <div>
-    <button md-raised-button>Search</button>
-  </div>
+        </template>
+      </ngb-panel>
+      <ngb-panel title="Section 2">
+        <template ngbPanelContent>
 
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" name="check1" type="checkbox" value="">
+              Option one is this and that&mdash;be sure to include why it's great
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <label class="form-check-label">
+              <input class="form-check-input" name="check2" type="checkbox" value="" disabled>
+              Option two is disabled
+            </label>
+          </div>
+
+          <md-checkbox [(ngModel)]="checkbox1">checkbox 1</md-checkbox>
+          <md-checkbox [(ngModel)]="checkbox2">checkbox 2</md-checkbox>
+          <md-checkbox [(ngModel)]="checkbox3">checkbox 3</md-checkbox>
+        </template>
+      </ngb-panel>    
+    </ngb-accordion>
+
+    <hr>
+    
+    <div class="display-flex flex-row justify-center">
+      <button md-raised-button color="primary" (click)="search()">Search</button>
+    </div>
+
+  <!-- </form> -->
 </div>

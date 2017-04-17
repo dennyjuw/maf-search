@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceSearchDataService } from '../service-search-data.service';
 
 @Component({
   selector: 'app-maf-search-filter',
@@ -7,18 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MafSearchFilterComponent implements OnInit {
 
-  suburb = 'aa';
+  suburb = '';
   checkbox1 = true;
   checkbox2 = false;
   checkbox3 = true;
 
-  constructor() { }
+  constructor(private _serviceSearchDataService: ServiceSearchDataService) { 
+  }
 
   ngOnInit() {
   }
 
   search() {
     console.log('search clicked');
-    // console.log(this.suburb);
+    this._serviceSearchDataService.insertData(this.suburb);
   }
 }

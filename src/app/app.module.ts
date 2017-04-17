@@ -32,10 +32,9 @@ import { MafSearchGmapComponent } from './maf-search-gmap/maf-search-gmap.compon
     MdButtonModule,
     MdCheckboxModule,
     MdInputModule,
-    // AgmCoreModule.forRoot({
-    //   apiKey: 'YOUR_KEY'
-    // })
-    AgmCoreModule.forRoot()
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAZhm-hab7bBO50eDeHhGTdKbl8o0XrXEA'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

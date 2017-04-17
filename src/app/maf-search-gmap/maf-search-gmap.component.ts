@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceSearchDataService } from '../service-search-data.service';
 
 @Component({
   selector: 'app-maf-search-gmap',
@@ -7,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MafSearchGmapComponent implements OnInit {
 
+  suburb: string = '';
   lat: number = 51.678418;
   lng: number = 7.809007;
 
-  constructor() { }
+  constructor(private _serviceSearchDataService: ServiceSearchDataService) { 
+  }
 
   ngOnInit() {
+    this.suburb = this._serviceSearchDataService.filterData[0];
   }
 
 }

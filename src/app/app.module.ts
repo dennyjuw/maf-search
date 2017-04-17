@@ -12,13 +12,15 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
 import { AppComponent } from './app.component';
 import { MafSearchToolbarComponent } from './maf-search-toolbar/maf-search-toolbar.component';
 import { MafSearchFilterComponent } from './maf-search-filter/maf-search-filter.component';
+import { MafSearchGmapComponent } from './maf-search-gmap/maf-search-gmap.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MafSearchToolbarComponent,
-    MafSearchFilterComponent
+    MafSearchFilterComponent,
+    MafSearchGmapComponent
   ],
   imports: [
     BrowserModule,
@@ -30,9 +32,10 @@ import { MafSearchFilterComponent } from './maf-search-filter/maf-search-filter.
     MdButtonModule,
     MdCheckboxModule,
     MdInputModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'YOUR_KEY'
-    })
+    // AgmCoreModule.forRoot({
+    //   apiKey: 'YOUR_KEY'
+    // })
+    AgmCoreModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

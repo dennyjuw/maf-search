@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MafSearchFilterComponent implements OnInit {
 
+  suburb = 'aa';
+  checkbox1 = true;
+  checkbox2 = false;
+  checkbox3 = true;
+
   constructor() { }
 
   ngOnInit() {

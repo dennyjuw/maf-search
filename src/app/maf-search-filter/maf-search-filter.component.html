@@ -8,8 +8,9 @@
 
           <div class="form-group">
             <label for="exampleInputEmail1">Suburb</label>
-            <input type="text" class="form-control" id="maf-searc-suburb" placeholder="Enter suburb">            
+            <input type="text" class="form-control" id="maf-searc-suburb" placeholder="Enter suburb" [(ngModel)]="suburb">
           </div>
+          <p>{{ suburb }}</p>
 
         </template>
       </ngb-panel>

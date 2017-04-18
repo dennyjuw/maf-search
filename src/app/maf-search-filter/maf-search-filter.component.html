@@ -2,6 +2,7 @@
 
   <!-- <form> -->
 
+  <!--
     <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
       <ngb-panel title="Section 1">
         <template ngbPanelContent>
@@ -35,13 +36,33 @@
           <md-checkbox [(ngModel)]="checkbox3">checkbox 3</md-checkbox>
         </template>
       </ngb-panel>    
-    </ngb-accordion>
+    </ngb-accordion> 
+    -->
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Suburb</label>
+      <input type="text" class="form-control" id="maf-searc-suburb" placeholder="Enter suburb" [(ngModel)]="suburb">
+    </div>
+    <p>{{ suburb }}</p>
 
     <hr>
-    
+
+    <div *ngFor="let section of searchQuery">
+      <h5 class="mb-3">{{section.section}}</h5>
+      <div *ngFor="let option of section.options" class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" [(ngModel)]="option.checked">
+            {{option.name}}
+        </label>
+      </div>
+      <hr>
+    </div>
+
     <div class="display-flex flex-row justify-center">
       <button md-raised-button color="primary" (click)="search()">Search</button>
     </div>
+
+
 
   <!-- </form> -->
 </div>

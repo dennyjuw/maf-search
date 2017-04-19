@@ -31,16 +31,16 @@ export class MafSearchFilterComponent implements OnInit {
     },
     { section: 'Other preferences',
       options: [
-        {name: 'LGBTI friendly', value: 'background-passport', checked: false},
-        {name: 'Pet friendly', value: 'background-police', checked: false},
-        {name: 'Non smoker', value: 'background-wwcc', checked: false}
+        {name: 'LGBTI friendly', value: 'pref-lgbti', checked: false},
+        {name: 'Pet friendly', value: 'pref-pet', checked: false},
+        {name: 'Non smoker', value: 'pref-non-smoker', checked: false}
       ]
     },
     { section: 'Qualifications',
       options: [
-        {name: 'Nursing Services', value: 'background-passport', checked: false},
-        {name: 'Personal Care', value: 'background-police', checked: false},
-        {name: 'Social & Domestic Assitance', value: 'background-wwcc', checked: false}
+        {name: 'Nursing Services', value: 'qualifiation-nursing', checked: false},
+        {name: 'Personal Care', value: 'qualification-personal-care', checked: false},
+        {name: 'Social & Domestic Assitance', value: 'qualification-social-domestic', checked: false}
       ]
     }
   ];
@@ -55,6 +55,6 @@ export class MafSearchFilterComponent implements OnInit {
   search() {
     console.log('search clicked');
     console.log(this.searchQuery);
-    this._serviceSearchDataService.insertData(this.suburb);
+    this._serviceSearchDataService.insertData(this.searchQuery);
   }
 }

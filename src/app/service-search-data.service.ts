@@ -3,12 +3,12 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ServiceSearchDataService {
 
-  filterData:string[] = ['a'];
+  filterData:object = [];
 
   constructor() { }
 
-  insertData(data: string){
-    this.filterData.unshift(data);
+  insertData(data: object){
+    this.filterData = (data);
     console.log(data);
   }
 

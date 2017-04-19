@@ -45,6 +45,27 @@ export class MafSearchFilterComponent implements OnInit {
     }
   ];
   
+  providerData = {
+    lat: 49.178418,
+    lng: 7.609007,
+    providers: [
+      {
+        name: 'provider 1',
+        lat: 32,
+        lng: 151
+      },
+      {
+        name: 'provider 2',
+        lat: 33,
+        lng: 151    
+      },
+      {
+        name: 'provider 3',
+        lat: 34,
+        lng: 151
+      }
+    ]
+  };
 
   constructor(private _serviceSearchDataService: ServiceSearchDataService) { 
   }
@@ -54,7 +75,6 @@ export class MafSearchFilterComponent implements OnInit {
 
   search() {
     console.log('search clicked');
-    console.log(this.searchQuery);
-    this._serviceSearchDataService.insertData(this.searchQuery);
+    this._serviceSearchDataService.insertData(JSON.stringify(this.providerData));
   }
 }

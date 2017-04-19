@@ -1,6 +1,10 @@
-<p>
-{{ suburb }}
-</p>
+<div *ngFor="let section of searchQuery">
+  <div *ngFor="let option of section.options">
+      {{option.name}} - {{option.checked}}
+  </div>
+  <hr>
+</div>
+
 <sebm-google-map [latitude]="lat" [longitude]="lng">
   <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
 </sebm-google-map>

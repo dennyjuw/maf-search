@@ -12,11 +12,30 @@ export class MafSearchGmapComponent implements OnInit {
   lat: number = 51.678418;
   lng: number = 7.809007;
 
+  providerData;
+  subscription;
+
+
   constructor(private _serviceSearchDataService: ServiceSearchDataService) { 
   }
 
+  // ngOnInit() {
+  //   // this.suburb = this._serviceSearchDataService.filterData[0];
+  //   this.suburb = 'abc';
+  // }
+
   ngOnInit() {
-    this.suburb = this._serviceSearchDataService.filterData[0];
+
+    this.subscription = this._serviceSearchDataService.providerData.subscribe(providerData => {
+      this.providerData = JSON.parse(providerData);
+      console.log(providerData);
+      this.lat = this.providerData.lat;
+      this.lng = this.providerData.lng;
+    });
+    
   }
 
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
 }

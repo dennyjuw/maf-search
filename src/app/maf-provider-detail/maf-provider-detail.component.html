@@ -1,19 +1,21 @@
-<div *ngFor="let provider of providerData" class="card card-outline-secondary card-provider-info mt-3 clear-fix d-flex flex-row p-3">
-  <div class="pr-3">
-    <img src="http://placehold.it/80x80" class="rounded-circle">
-  </div>
-  <div>
-    <h4 class="card-title">{{ provider.name }}</h4>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">{{ provider.description }}</p>
-    <div class="text-right">
-      <a href="#" class="btn btn-primary">View detail</a>
+<div class="maf-provider-detail p-3" *ngIf="firstSearch">
+  <div *ngFor="let provider of providerData" class="card card-outline-secondary card-provider-info mb-3 clear-fix d-flex flex-row p-3">
+    <div class="pr-3">
+      <img src="http://placehold.it/80x80" class="rounded-circle">
+    </div>
+    <div>
+      <h4 class="card-title">{{ provider.name }}</h4>
+      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+      <p class="card-text">{{ provider.description }}</p>
+      <div class="text-right">
+        <a href="#" class="btn btn-primary">View detail</a>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="card mt-3" *ngIf="providerData.length == 0">
-  <div class="card-block">
-    <p class="lead">Sorry we could not find any results from your seach query</p>
+  <div class="card" *ngIf="providerData.length == 0">
+    <div class="card-block">
+      <p class="lead">Sorry we could not find any results from your seach query</p>
+    </div>
   </div>
 </div>

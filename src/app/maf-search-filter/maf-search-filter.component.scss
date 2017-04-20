@@ -15,6 +15,10 @@
       color: $white;
     }
   }
+}
 
-
+.search-filter {
+  background: $mercury;
+  overflow-y: scroll;
+  width: 300px;
 }

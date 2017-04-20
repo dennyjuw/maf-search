@@ -10,6 +10,7 @@ export class MafProviderDetailComponent implements OnInit {
 
   providerData = [];
   subscription;
+  firstSearch:boolean = false;
 
   constructor(private _serviceSearchDataService: ServiceSearchDataService) { }
 
@@ -17,6 +18,7 @@ export class MafProviderDetailComponent implements OnInit {
     this.subscription = this._serviceSearchDataService.providerData.subscribe(providerData => {
       this.providerData = JSON.parse(providerData).providers;
       console.log(this.providerData);
+      this.firstSearch = true;
     });
   }
 

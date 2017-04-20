@@ -1,3 +1,7 @@
+.maf-provider-detail {
+  width: 300px;
+}
+
 .card-provider-info{
   transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
 
@@ -6,3 +10,4 @@
     transform: translate3d(0, -3px, 0);
   }
 }
+

@@ -8,7 +8,7 @@ import { ServiceSearchDataService } from '../service-search-data.service';
 })
 export class MafProviderDetailComponent implements OnInit {
 
-  providerData;
+  providerData = [];
   subscription;
 
   constructor(private _serviceSearchDataService: ServiceSearchDataService) { }

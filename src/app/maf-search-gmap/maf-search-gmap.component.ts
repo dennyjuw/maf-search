@@ -11,6 +11,7 @@ export class MafSearchGmapComponent implements OnInit {
   suburb: string = '';
   lat: number = 51.678418;
   lng: number = 7.809007;
+  providerMarker;
 
   providerData;
   subscription;
@@ -24,6 +25,7 @@ export class MafSearchGmapComponent implements OnInit {
       console.log(providerData);
       this.lat = this.providerData.lat;
       this.lng = this.providerData.lng;
+      this.providerMarker = this.providerData.providers;
     });
   }
 

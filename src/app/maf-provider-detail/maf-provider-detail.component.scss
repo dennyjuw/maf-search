@@ -1,0 +1,8 @@
+.card-provider-info{
+  transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
+
+  &:hover {
+    box-shadow: 10px 10px 70px -20px rgba(0, 0, 0, 0.3);
+    transform: translate3d(0, -3px, 0);
+  }
+}

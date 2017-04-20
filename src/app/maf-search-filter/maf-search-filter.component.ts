@@ -9,9 +9,6 @@ import { ServiceSearchDataService } from '../service-search-data.service';
 export class MafSearchFilterComponent implements OnInit {
 
   suburb = '';
-  checkbox1 = true;
-  checkbox2 = false;
-  checkbox3 = true;
 
   searchQuery = [
     { section: 'Gender',
@@ -44,30 +41,33 @@ export class MafSearchFilterComponent implements OnInit {
       ]
     }
   ];
-  
+
   providerData = {
     lat: 49.178418,
     lng: 7.609007,
     providers: [
       {
         name: 'provider 1',
-        lat: 32,
-        lng: 151
+        lat: 49.378418,
+        lng: 7.609007,
+        description: 'Text description for provider 1'
       },
       {
         name: 'provider 2',
-        lat: 33,
-        lng: 151    
+        lat: 49.678418,
+        lng: 7.609007,
+        description: 'Text description for provider 2'
       },
       {
         name: 'provider 3',
-        lat: 34,
-        lng: 151
+        lat: 49.878418,
+        lng: 7.609007,
+        description: 'Text description for provider 3'
       }
     ]
   };
 
-  constructor(private _serviceSearchDataService: ServiceSearchDataService) { 
+  constructor(private _serviceSearchDataService: ServiceSearchDataService) {
   }
 
   ngOnInit() {

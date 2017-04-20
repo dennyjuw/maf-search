@@ -15,24 +15,16 @@ export class MafSearchGmapComponent implements OnInit {
   providerData;
   subscription;
 
-
-  constructor(private _serviceSearchDataService: ServiceSearchDataService) { 
+  constructor(private _serviceSearchDataService: ServiceSearchDataService) {
   }
 
-  // ngOnInit() {
-  //   // this.suburb = this._serviceSearchDataService.filterData[0];
-  //   this.suburb = 'abc';
-  // }
-
   ngOnInit() {
-
     this.subscription = this._serviceSearchDataService.providerData.subscribe(providerData => {
       this.providerData = JSON.parse(providerData);
       console.log(providerData);
       this.lat = this.providerData.lat;
       this.lng = this.providerData.lng;
     });
-    
   }
 
   ngOnDestroy() {

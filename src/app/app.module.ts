@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { MafSearchToolbarComponent } from './maf-search-toolbar/maf-search-toolbar.component';
 import { MafSearchFilterComponent } from './maf-search-filter/maf-search-filter.component';
 import { MafSearchGmapComponent } from './maf-search-gmap/maf-search-gmap.component';
+import { MafProviderDetailComponent } from './maf-provider-detail/maf-provider-detail.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { MafSearchGmapComponent } from './maf-search-gmap/maf-search-gmap.compon
     AppComponent,
     MafSearchToolbarComponent,
     MafSearchFilterComponent,
-    MafSearchGmapComponent
+    MafSearchGmapComponent,
+    MafProviderDetailComponent
   ],
   imports: [
     BrowserModule,

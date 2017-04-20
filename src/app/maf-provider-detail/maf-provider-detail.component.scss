@@ -1,5 +1,11 @@
 .maf-provider-detail {
+  margin-right: -300px;
   width: 300px;
+  transition: margin-right .3s ease-in-out;
+
+  &.show {
+    margin-right: 0px;
+  }
 }
 
 .card-provider-info{

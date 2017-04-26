@@ -10,7 +10,8 @@ export class MafProviderDetailComponent implements OnInit {
 
   providerData = [];
   subscription;
-  firstSearch:boolean = false;
+  firstSearch: boolean = false;
+  selectedProviderId: number;
 
   constructor(private _serviceSearchDataService: ServiceSearchDataService) { }
 
@@ -24,5 +25,10 @@ export class MafProviderDetailComponent implements OnInit {
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
+  }
+
+  public selectProvider(providerId: number) {
+    this.selectedProviderId = providerId;
+    this._serviceSearchDataService.insertProviderId(providerId);
   }
 }

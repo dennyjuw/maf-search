@@ -47,22 +47,32 @@ export class MafSearchFilterComponent implements OnInit {
     lng: 7.609007,
     providers: [
       {
+        id: 429123,
         name: 'provider 1',
         lat: 49.378418,
         lng: 7.609007,
         description: 'Text description for provider 1'
       },
       {
+        id: 998342,
         name: 'provider 2',
         lat: 49.678418,
         lng: 7.609007,
         description: 'Text description for provider 2'
       },
       {
+        id: 241887,
         name: 'provider 3',
         lat: 49.878418,
         lng: 7.609007,
         description: 'Text description for provider 3'
+      },
+      {
+        id: 105831,
+        name: 'provider 4',
+        lat: 49.778418,
+        lng: 7.709007,
+        description: 'Text description for provider 4'
       }
     ]
   };
@@ -75,6 +85,6 @@ export class MafSearchFilterComponent implements OnInit {
 
   search() {
     console.log('search clicked');
-    this._serviceSearchDataService.insertData(JSON.stringify(this.providerData));
+    this._serviceSearchDataService.insertProviderData(JSON.stringify(this.providerData));
   }
 }

@@ -16,6 +16,9 @@ export class MafSearchGmapComponent implements OnInit {
   providerData;
   subscription;
 
+  selectedProviderId;
+  selectedProviderSubscription;
+
   constructor(private _serviceSearchDataService: ServiceSearchDataService) {
   }
 
@@ -27,9 +30,14 @@ export class MafSearchGmapComponent implements OnInit {
       this.lng = this.providerData.lng;
       this.providerMarker = this.providerData.providers;
     });
+
+    this.selectedProviderSubscription = this._serviceSearchDataService.selectedProviderId.subscribe(providerId => {
+      this.selectedProviderId = providerId;
+    });
   }
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
+    this.selectedProviderSubscription.unsubscribe();
   }
 }
